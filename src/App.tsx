@@ -6,7 +6,7 @@ import './App.scss'
 function App() {
 
   return (
-    <main>
+    <main className='main-container'>
       <Browse />
       <Header />
       <Sidebar />
