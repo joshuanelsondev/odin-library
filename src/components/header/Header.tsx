@@ -1,6 +1,6 @@
 import Icon from '@mdi/react';
 import { mdiBookOpenBlankVariantOutline, mdiBellOutline } from '@mdi/js';
-
+import profileIcon from '../../assets/profile-icon.jpeg'
 import './Header.scss'
 
 export default function Header () {
@@ -16,6 +16,7 @@ export default function Header () {
       <p>MyBooks</p>
       <Icon path={mdiBookOpenBlankVariantOutline} size={1} />
       <Icon path={mdiBellOutline} size={1} />
+      <img src={profileIcon} alt="profile icon" />
     </div>
   )
 }
