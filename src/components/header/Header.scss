@@ -1,0 +1,59 @@
+$base-color: #4770C6;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-column: 1 / 4;
+  grid-row: 1;
+  color: $base-color;
+
+  &__logo {
+    height: auto;
+    width: 4em;
+    font-weight: 900;
+    text-align: left;
+
+  }
+
+  &__search-form {
+    display: flex;
+    height: 2.5em;
+    width: 30em;
+  }
+
+  &__search-input {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    padding-left: 1.5em;
+    border-radius: .7em 0 0 .7em;
+    border: none;
+
+    &::placeholder {
+      color: #C6C6C6;
+      font-size: 1.2em;
+    }
+  }
+
+  &__search-btn {
+    height: auto;
+    width: 8em;
+    border: none;
+    background-color: $base-color;
+    border-radius: 0 .7em .7em 0;
+    font-size: 1em;
+    font-weight: 500;
+  }
+
+  &__browse, &__mybooks {
+    font-size: .9em;
+    font-weight: 700;
+  }
+
+  &__profile-icon {
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 2em;
+  }
+}

@@ -7,8 +7,8 @@ function App() {
 
   return (
     <main className='main-container'>
-      <Browse />
       <Header />
+      <Browse />
       <Sidebar />
     </main>
   )
