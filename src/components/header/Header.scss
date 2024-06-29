@@ -14,6 +14,7 @@ $base-color: #4770C6;
     width: 4em;
     font-weight: 900;
     text-align: left;
+    cursor: pointer;
 
   }
 
@@ -45,6 +46,7 @@ $base-color: #4770C6;
     border-radius: 0 .7em .7em 0;
     font-size: 1em;
     font-weight: 500;
+    cursor: pointer;
   }
 
   &__icon {
