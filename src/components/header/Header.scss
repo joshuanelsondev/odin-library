@@ -47,6 +47,11 @@ $base-color: #4770C6;
     font-weight: 500;
   }
 
+  &__icon {
+    height: 2em;
+    width: 2em;
+  }
+
   &__browse, &__mybooks {
     font-size: .9em;
     font-weight: 700;

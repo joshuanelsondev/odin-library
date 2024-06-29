@@ -13,8 +13,8 @@ export default function Header () {
       </form>
       <p className='header__browse'>Browse</p>
       <p className='header__mybooks'>My Books</p>
-      <LuBookOpen className='header__icon' size={1.5} />
-      <LuBell className='header__icon' size={1.5} />
+      <LuBookOpen className='header__icon' size={1} />
+      <LuBell className='header__icon' size={1} />
       <img className='header__profile-icon' src={profileIcon} alt="profile icon" />
     </div>
   )
