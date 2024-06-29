@@ -50,16 +50,19 @@ $base-color: #4770C6;
   &__icon {
     height: 2em;
     width: 2em;
+    cursor: pointer;
   }
 
   &__browse, &__mybooks {
     font-size: .9em;
     font-weight: 700;
+    cursor: pointer;
   }
 
   &__profile-icon {
     height: 2.5em;
     width: 2.5em;
     border-radius: 2em;
+    cursor: pointer;
   }
 }
