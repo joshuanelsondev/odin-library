@@ -3,6 +3,7 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
+  background-color: #1E2021;
 }
 
 #root {
@@ -12,12 +13,11 @@ body {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #1E2021;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
+  height: fit-content;
   width: 100%;
 }
