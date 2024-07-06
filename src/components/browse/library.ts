@@ -1,11 +1,3 @@
-/*
-- ExtraOrdinary:: V.E. Schwab, Enid Balam  
-- Another Kind:: Trevor Bream
-- The High 5 Habit: Take...:: Mel Robbins
-- The Perfect Day to...:: Rick Ross
-- Sapiens: A Graphic...:: David Vandermeulen, ...
-- Peak Mind: Find Your...:: Amishi P. Jha
-*/
 interface BookDetails {
  title: string
  author: string
@@ -15,7 +7,7 @@ interface BookDetails {
  summary: string
 }
 
-const myLibrary: BookDetails = [
+const myLibrary: BookDetails[] = [
   {
     title: 'ExtraOrdinary, (Villains #1.5)',
     author: 'V.E. Schwab, Enid Balam',
@@ -37,7 +29,7 @@ const myLibrary: BookDetails = [
     author: 'Mel Robbins',
     isbn: '1401962122',
     publisher: 'Hay House Inc.',
-    publisher_date: '9-28-2021',
+    publisher_date: '09-28-2021',
     summary: 'Adipisicing temporibus illum sit sapiente est.'
   },
   {
@@ -45,7 +37,7 @@ const myLibrary: BookDetails = [
     author: 'Rick Ross',
     isbn: '0369705793',
     publisher: 'Hanover Square Press',
-    publisher_date: '9-7-2021',
+    publisher_date: '09-7-2021',
     summary: 'Lorem numquam cumque eos repudiandae molestias ad similique.'
   },
   {
