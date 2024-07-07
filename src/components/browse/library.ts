@@ -5,6 +5,7 @@ interface BookDetails {
  publisher: string
  publisher_date: string
  summary: string
+ cover_image_url: string
 }
 
 const myLibrary: BookDetails[] = [
@@ -14,7 +15,8 @@ const myLibrary: BookDetails[] = [
     isbn: '1785865889',
     publisher: 'Titan Comics',
     publisher_date: '10-2-2021',
-    summary: 'Sit similique quas iste veritatis voluptates Accusantium sequi non voluptates.'
+    summary: 'Sit similique quas iste veritatis voluptates Accusantium sequi non voluptates.',
+    cover_image_url: 'src/assets/bookCovers/ExtraOrdinary.png'
   },
   {
     title: 'Another Kind',
@@ -22,7 +24,8 @@ const myLibrary: BookDetails[] = [
     isbn: '006304353X',
     publisher: 'HarperAlley',
     publisher_date: '10-26-2021',
-    summary: 'Amet facilis similique culpa non commodi nam? Error facere ipsa'
+    summary: 'Amet facilis similique culpa non commodi nam? Error facere ipsa',
+    cover_image_url: 'src/assets/bookCovers/Another_Kind.png'
   },
   {
     title: 'The High 5 habit: Take Control of Your Life with One Simple Habit',
@@ -31,6 +34,7 @@ const myLibrary: BookDetails[] = [
     publisher: 'Hay House Inc.',
     publisher_date: '09-28-2021',
     summary: 'Adipisicing temporibus illum sit sapiente est.'
+    cover_image_url:
   },
   {
     title: 'The Perfect Day to Boss Up',
@@ -38,7 +42,8 @@ const myLibrary: BookDetails[] = [
     isbn: '0369705793',
     publisher: 'Hanover Square Press',
     publisher_date: '09-7-2021',
-    summary: 'Lorem numquam cumque eos repudiandae molestias ad similique.'
+    summary: 'Lorem numquam cumque eos repudiandae molestias ad similique.',
+    cover_image_url: 'src/assets/bookCovers/The_Perfect_Day_To....png'
   },
   {
     title: 'Sapiens: A Graphic History, Volume 2 - The Pillars of Civilization',
@@ -46,7 +51,8 @@ const myLibrary: BookDetails[] = [
     isbn: '0369705793',
     publisher: 'Harper Perennial',
     publisher_date: '10,26,2021',
-    summary: 'Lorem repellendus accusantium enim ex atque Alias praesentium quibusdam neque fugiat'
+    summary: 'Lorem repellendus accusantium enim ex atque Alias praesentium quibusdam neque fugiat',
+    cover_image_url: 'src/assets/bookCovers/Sapiens_A_Graphic_History.png'
   },
   {
     title: 'Peak Mind: Find Your Focus, Own Your Attention, Invest 12 Minutes a Day',
@@ -54,6 +60,7 @@ const myLibrary: BookDetails[] = [
     isbn: '0062992163',
     publisher: 'HarperOne',
     publisher_date: '10-19-2021',
-    summary: 'Elit velit provident eaque odit iste.'
+    summary: 'Elit velit provident eaque odit iste.',
+    cover_image_url: 'src/assets/bookCovers/Peak_Mind_Find_Your_Focus.png'
   }
 ]
