@@ -1,4 +1,8 @@
 import './Browse.scss'
+import { BookDetails, myLibrary } from './library';
+
+ console.log(myLibrary);
+
 
 export default function Browse () {
   return (
