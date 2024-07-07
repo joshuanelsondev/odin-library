@@ -1,7 +1,7 @@
 import './Browse.scss'
 import { BookDetails, myLibrary } from './library';
 
- console.log(myLibrary);
+console.log('mylibrary: ', myLibrary);
 
 
 export default function Browse () {
@@ -41,6 +41,15 @@ export default function Browse () {
          <option value='read'>Read</option>
          <option value='unread'>Unread</option>
        </select>
+      </div>
+      <div className='books'>
+        {myLibrary && myLibrary.map(book => {
+          return (
+            <div key={book.isbn} className='book'>
+
+            </div>
+          )
+        })}
       </div>
     </div>
   )

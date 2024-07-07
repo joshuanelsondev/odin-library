@@ -1,7 +1,4 @@
-import { v4 as uuid } from 'uuid'
-
 export interface BookDetails {
- id: string 
  title: string
  author: string
  isbn: string
@@ -13,7 +10,6 @@ export interface BookDetails {
 
 export const myLibrary: BookDetails[] = [
   {
-    id: uuid(),
     title: 'ExtraOrdinary, (Villains #1.5)',
     author: 'V.E. Schwab, Enid Balam',
     isbn: '1785865889',
@@ -23,7 +19,6 @@ export const myLibrary: BookDetails[] = [
     cover_image_url: 'src/assets/bookCovers/ExtraOrdinary.png'
   },
   {
-    id: uuid(),
     title: 'Another Kind',
     author: 'Trevor Bream',
     isbn: '006304353X',
@@ -33,7 +28,6 @@ export const myLibrary: BookDetails[] = [
     cover_image_url: 'src/assets/bookCovers/Another_Kind.png'
   },
   {
-    id: uuid(),
     title: 'The High 5 habit: Take Control of Your Life with One Simple Habit',
     author: 'Mel Robbins',
     isbn: '1401962122',
@@ -43,7 +37,6 @@ export const myLibrary: BookDetails[] = [
     cover_image_url: 'src/assets/bookCovers/The_High_5_Habit.png'
   },
   {
-    id: uuid(),
     title: 'The Perfect Day to Boss Up',
     author: 'Rick Ross',
     isbn: '0369705793',
@@ -53,7 +46,6 @@ export const myLibrary: BookDetails[] = [
     cover_image_url: 'src/assets/bookCovers/The_Perfect_Day_To....png'
   },
   {
-    id: uuid(),
     title: 'Sapiens: A Graphic History, Volume 2 - The Pillars of Civilization',
     author: 'David Vandermeulen, Daniel Casanave, Yuval Noah Harari',
     isbn: '0369705793',
@@ -63,7 +55,6 @@ export const myLibrary: BookDetails[] = [
     cover_image_url: 'src/assets/bookCovers/Sapiens_A_Graphic_History.png'
   },
   {
-    id: uuid(),
     title: 'Peak Mind: Find Your Focus, Own Your Attention, Invest 12 Minutes a Day',
     author: 'Amishi P. Jha',
     isbn: '0062992163',
