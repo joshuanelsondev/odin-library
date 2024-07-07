@@ -1,4 +1,4 @@
-interface BookDetails {
+export interface BookDetails {
  title: string
  author: string
  isbn: string
@@ -8,7 +8,7 @@ interface BookDetails {
  cover_image_url: string
 }
 
-const myLibrary: BookDetails[] = [
+export const myLibrary: BookDetails[] = [
   {
     title: 'ExtraOrdinary, (Villains #1.5)',
     author: 'V.E. Schwab, Enid Balam',
@@ -33,8 +33,8 @@ const myLibrary: BookDetails[] = [
     isbn: '1401962122',
     publisher: 'Hay House Inc.',
     publisher_date: '09-28-2021',
-    summary: 'Adipisicing temporibus illum sit sapiente est.'
-    cover_image_url:
+    summary: 'Adipisicing temporibus illum sit sapiente est.',
+    cover_image_url: 'src/assets/bookCovers/The_High_5_Habit.png'
   },
   {
     title: 'The Perfect Day to Boss Up',
