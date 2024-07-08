@@ -46,7 +46,11 @@ export default function Browse () {
         {myLibrary && myLibrary.map(book => {
           return (
             <div key={book.isbn} className='book'>
-
+              <img src={book.cover_image_url} alt={`${book.title} cover`} className='book__cover' />
+              <div className='book__label'>
+                <p className='book__title'>{book.title}</p>
+                <p className='book__author'>{book.author}</p>
+              </div>
             </div>
           )
         })}
