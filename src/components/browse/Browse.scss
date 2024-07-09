@@ -32,7 +32,7 @@
   height:16em;
   width: 10em;
   position: relative;
-  border-radius: 1em;
+  border-radius: 0.8em;
 
   &__cover {
     height: 100%;
@@ -48,5 +48,15 @@
     height: 4em;
     width: inherit;
     border-radius: 0 0 1em 1em;
+    box-sizing: border-box;
+    padding: 0.5em;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__author {
+    margin: 0;
   }
 }
