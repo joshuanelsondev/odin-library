@@ -48,7 +48,7 @@ export const myLibrary: BookDetails[] = [
   {
     title: 'Sapiens: A Graphic History, Volume 2 - The Pillars of Civilization',
     author: 'David Vandermeulen, Daniel Casanave, Yuval Noah Harari',
-    isbn: '0369705793',
+    isbn: '0063212234',
     publisher: 'Harper Perennial',
     publisher_date: '10,26,2021',
     summary: 'Lorem repellendus accusantium enim ex atque Alias praesentium quibusdam neque fugiat',
