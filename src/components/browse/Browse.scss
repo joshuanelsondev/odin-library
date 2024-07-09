@@ -14,7 +14,6 @@
     border-radius: .5em;
     height: 2.5em;
     width: 100%;
-    max-width: 14em;
     color: gray;
     background-color: white;
     padding: 0;
@@ -24,20 +23,21 @@
 
 .books {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 11em);
   gap: 2em 1em;
+  justify-content: space-between;
 }
 
 .book {
   display: grid;
   justify-content: space-around;
   height:16em;
-  width: 10em;
+  width: 100%;
   position: relative;
   border-radius: 0.8em;
 
   &__cover {
-    height: 100%;
+    height: inherit;
     width: 100%;
     border-radius: inherit;
   }
