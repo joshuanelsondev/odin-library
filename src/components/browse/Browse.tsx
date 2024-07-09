@@ -9,6 +9,8 @@ export default function Browse () {
     <div className='browse'>
       <h2 className='browse__header'>Browse The Library</h2>
       <div className='browse__filter' >
+      </div>
+      <div className='books'>
       {/* Genre dropdown - loop through the current available genres */}
        <select className='browse__select' id="genre" name="genre">
          <option>Genre</option>
@@ -41,8 +43,6 @@ export default function Browse () {
          <option value='read'>Read</option>
          <option value='unread'>Unread</option>
        </select>
-      </div>
-      <div className='books'>
         {myLibrary && myLibrary.map(book => {
           return (
             <div key={book.isbn} className='book'>
