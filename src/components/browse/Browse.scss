@@ -34,6 +34,7 @@
   width: inherit;
   position: relative;
   border-radius: 0.8em;
+  cursor: pointer;
 
   &__cover {
     height: inherit;
@@ -43,22 +44,33 @@
 
   &__label {
     position: absolute;
+    display: grid;
+    align-content: center;
     bottom: 0;
-    background-color: #4c72c4ed;
+    background-color: #4c72c4f2;
     font-size: 12px;
-    height: 4em;
+    height: auto;
     width: 100%;
     border-radius: 0 0 1em 1em;
     box-sizing: border-box;
-    padding: 0.5em 1em;
+    padding: 0.4em 1.5em;
+    line-height: 1.2em;
   }
 
   &__title {
     margin: 0;
+    width: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__author {
     font-weight: 700;
     margin: 0;
+    width: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
