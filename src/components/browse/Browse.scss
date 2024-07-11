@@ -24,13 +24,13 @@
 .books {
   display: grid;
   grid-template-columns: repeat(3, 11em);
-  gap: 2em 1em;
+  gap: 2em;
   justify-content: space-between;
 }
 
 .book {
   display: grid;
-  height:16em;
+  height:17em;
   width: inherit;
   position: relative;
   border-radius: 0.8em;
