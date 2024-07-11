@@ -1,12 +1,12 @@
-import { useState } from 'react'
 import './Browse.scss'
 import { BookDetails, myLibrary } from './library'
 
-console.log('mylibrary: ', myLibrary);
+interface BrowseProps {
+  currentBook: string | null
+  setCurrentBook: (isbn: string | null) => void
+}
 
-
-export default function Browse () {
-  const [ currentBook, setCurrentBook ] = useState<string | null>(null)
+export default function Browse ({ currentBook, setCurrentBook }: BrowseProps) {
 
   return (
     <div className='browse'>
