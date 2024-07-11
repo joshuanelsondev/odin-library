@@ -1,10 +1,13 @@
+import { useState } from 'react'
 import './Browse.scss'
-import { BookDetails, myLibrary } from './library';
+import { BookDetails, myLibrary } from './library'
 
 console.log('mylibrary: ', myLibrary);
 
 
 export default function Browse () {
+  const [ currentBook, setCurrentBook ] = useState<string | null>(null)
+
   return (
     <div className='browse'>
       <h2 className='browse__header'>Browse The Library</h2>
@@ -43,9 +46,9 @@ export default function Browse () {
          <option value='read'>Read</option>
          <option value='unread'>Unread</option>
        </select>
-        {myLibrary && myLibrary.map(book => {
+        {myLibrary && myLibrary.map((book: BookDetails) => {
           return (
-            <div key={book.isbn} className='book'>
+            <div key={book.isbn} className={`book ${currentBook === book.isbn ? 'selected' : ''}`} onClick={() => setCurrentBook(book.isbn)}>
               <img src={book.cover_image_url} alt={`${book.title} cover`} className='book__cover' />
               <div className='book__label'>
                 <p className='book__title'>{book.title}</p>
