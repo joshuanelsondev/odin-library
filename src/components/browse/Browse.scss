@@ -33,13 +33,18 @@
   height:17em;
   width: inherit;
   position: relative;
-  border-radius: 0.8em;
+  border-radius: 10px;
   cursor: pointer;
+
+  &__selected {
+    border: 5px solid #4c72c4f2;
+  }
 
   &__cover {
     height: inherit;
     width: 100%;
     border-radius: inherit;
+    box-sizing: border-box;
   }
 
   &__label {
@@ -51,7 +56,7 @@
     font-size: 12px;
     height: auto;
     width: 100%;
-    border-radius: 0 0 1em 1em;
+    border-radius: 0 0 10px 10px;
     box-sizing: border-box;
     padding: 0.4em 1.5em;
     line-height: 1.2em;
