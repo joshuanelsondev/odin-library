@@ -1,17 +1,12 @@
 import './Browse.scss'
 import { BookDetails, myLibrary } from './library'
 
-interface BrowseProps {
-  currentBook: string | null
-  setCurrentBook: (isbn: string | null) => void
-}
-
-export default function Browse ({ currentBook, setCurrentBook }: BrowseProps) {
+export default function Browse ({ currentBook, setCurrentBook }: BookDetails) {
 
   return (
     <div className='browse'>
       <h2 className='browse__header'>Browse The Library</h2>
-      <div className='browse__filter' >
+      <div className='browse__filter'>
       </div>
       <div className='books'>
       {/* Genre dropdown - loop through the current available genres */}
@@ -46,7 +41,7 @@ export default function Browse ({ currentBook, setCurrentBook }: BrowseProps) {
          <option value='read'>Read</option>
          <option value='unread'>Unread</option>
        </select>
-        {myLibrary && myLibrary.map((book: BookDetails) => {
+        {myLibrary && myLibrary.map((book: Book) => {
           return (
             <div key={book.isbn} className='book' onClick={() => setCurrentBook(book.isbn)}>
               <img src={book.cover_image_url} alt={`${book.title} cover`} className={`book__cover ${currentBook === book.isbn && 'book__selected'} `} />

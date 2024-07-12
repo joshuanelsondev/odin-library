@@ -1,7 +1,8 @@
 import { FaHeart } from "react-icons/fa";
 import './Sidebar.scss'
+import { Book } from '../../types/Book'
 
-export default function Sidebar () {
+export default function Sidebar ({ currentBook }: Book) {
   return(
     <div className='sidebar'>
       <h3 className='sidebar__header'>About This Book</h3>

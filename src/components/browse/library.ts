@@ -1,14 +1,6 @@
-export interface BookDetails {
- title: string
- author: string
- isbn: string
- publisher: string
- publisher_date: string
- summary: string
- cover_image_url: string
-}
+import { Book } from '../../../types/Book'
 
-export const myLibrary: BookDetails[] = [
+export const myLibrary: Book[] = [
   {
     title: 'ExtraOrdinary, (Villains #1.5)',
     author: 'V.E. Schwab, Enid Balam',
