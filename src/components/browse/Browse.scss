@@ -3,6 +3,10 @@
   height: 100%;
   width: auto;
 
+  &__header {
+    margin-top: 0;
+  }
+
   &__filter {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
