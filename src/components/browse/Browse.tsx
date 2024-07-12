@@ -49,8 +49,8 @@ export default function Browse ({ currentBook, setCurrentBook }: BrowseProps) {
        </select>
         {myLibrary && myLibrary.map((book: Book) => {
           return (
-            <div key={book.isbn} className='book' onClick={() => setCurrentBook(book.isbn)}>
-              <img src={book.cover_image_url} alt={`${book.title} cover`} className={`book__cover ${currentBook === book.isbn && 'book__selected'} `} />
+            <div key={book.isbn} className='book' onClick={() => setCurrentBook(book)}>
+              <img src={book.cover_image_url} alt={`${book.title} cover`} className={`book__cover ${currentBook.isbn === book.isbn && 'book__selected'} `} />
               <div className='book__label'>
                 <p className='book__title'>{book.title}</p>
                 <p className='book__author'>{book.author}</p>
