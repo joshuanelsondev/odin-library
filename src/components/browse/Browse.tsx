@@ -1,13 +1,13 @@
 import './Browse.scss'
-import { myLibrary } from './library'
 import { Book } from '../../types/Book'
 
 interface BrowseProps {
+  myLibrary: Book[]
   currentBook: Book | null
   setCurrentBook: (book: Book | null) => void
 }
 
-export default function Browse ({ currentBook, setCurrentBook }: BrowseProps) {
+export default function Browse ({ myLibrary, currentBook, setCurrentBook }: BrowseProps) {
 
   return (
     <div className='browse'>
