@@ -3,7 +3,7 @@ export interface Book {
  author: string
  isbn: string
  publisher: string
- publisher_date: string
+ published_date: string
  summary: string
  cover_image_url: string
 }

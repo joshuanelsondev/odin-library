@@ -10,6 +10,12 @@
   box-sizing: border-box;
   position: relative;
 
+  &__default {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+  }
+
   &__book {
     border: 1px solid black;
     height: 14em;
