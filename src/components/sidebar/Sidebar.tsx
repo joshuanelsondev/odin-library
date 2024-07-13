@@ -1,19 +1,20 @@
+import { Book } from '../../types/Book'
 import { FaHeart } from "react-icons/fa";
 import './Sidebar.scss'
-import { Book } from '../../types/Book'
 
 interface SidebarProps {
   currentBook: Book | null
+  toggleFavorite: (isbn: string) => void
 }
 
-export default function Sidebar ({ currentBook }: SidebarProps) {
+export default function Sidebar ({ currentBook, toggleFavorite }: SidebarProps) {
   return(
     <div className='sidebar'>
     {currentBook ? (
       <>
       <h3 className='sidebar__header'>About This Book</h3>
       <img className='sidebar__book' src={currentBook.cover_image_url} alt={`${currentBook.title} book cover`}/>
-      <FaHeart className='sidebar__heart' onClick={() => currentBook.is_favorite = !currentBook.is_favorite}/>
+      <FaHeart className='sidebar__heart' onClick={() => toggleFavorite(currentBook.isbn)}/>
       <p className='sidebar__info'>Title:<span className='sidebar__text'>{currentBook.title}</span></p>
       <p className='sidebar__info'>Author(s):<span className='sidebar__text'>{currentBook.author}</span></p>
       <p className='sidebar__info'>ISBN:<span className='sidebar__text'>{currentBook.isbn}</span></p>
