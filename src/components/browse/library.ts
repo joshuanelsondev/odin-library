@@ -8,7 +8,9 @@ export const myLibrary: Book[] = [
     publisher: 'Titan Comics',
     published_date: '10-2-2021',
     summary: 'Sit similique quas iste veritatis voluptates Accusantium sequi non voluptates.',
-    cover_image_url: 'src/assets/bookCovers/ExtraOrdinary.png'
+    cover_image_url: 'src/assets/bookCovers/ExtraOrdinary.png',
+    is_favorite: false,
+    read: true
   },
   {
     title: 'Another Kind',
@@ -17,7 +19,9 @@ export const myLibrary: Book[] = [
     publisher: 'HarperAlley',
     published_date: '10-26-2021',
     summary: 'Amet facilis similique culpa non commodi nam? Error facere ipsa',
-    cover_image_url: 'src/assets/bookCovers/Another_Kind.png'
+    cover_image_url: 'src/assets/bookCovers/Another_Kind.png',
+    is_favorite: false,
+    read: false
   },
   {
     title: 'The High 5 habit: Take Control of Your Life with One Simple Habit',
@@ -26,7 +30,9 @@ export const myLibrary: Book[] = [
     publisher: 'Hay House Inc.',
     published_date: '09-28-2021',
     summary: 'Adipisicing temporibus illum sit sapiente est.',
-    cover_image_url: 'src/assets/bookCovers/The_High_5_Habit.png'
+    cover_image_url: 'src/assets/bookCovers/The_High_5_Habit.png',
+    is_favorite: false,
+    read: true
   },
   {
     title: 'The Perfect Day to Boss Up',
@@ -35,7 +41,9 @@ export const myLibrary: Book[] = [
     publisher: 'Hanover Square Press',
     published_date: '09-7-2021',
     summary: 'Lorem numquam cumque eos repudiandae molestias ad similique.',
-    cover_image_url: 'src/assets/bookCovers/The_Perfect_Day_To....png'
+    cover_image_url: 'src/assets/bookCovers/The_Perfect_Day_To....png',
+    is_favorite: false,
+    read: true
   },
   {
     title: 'Sapiens: A Graphic History, Volume 2 - The Pillars of Civilization',
@@ -44,7 +52,9 @@ export const myLibrary: Book[] = [
     publisher: 'Harper Perennial',
     published_date: '10,26,2021',
     summary: 'Lorem repellendus accusantium enim ex atque Alias praesentium quibusdam neque fugiat',
-    cover_image_url: 'src/assets/bookCovers/Sapiens_A_Graphic_History.png'
+    cover_image_url: 'src/assets/bookCovers/Sapiens_A_Graphic_History.png',
+    is_favorite: false,
+    read: false
   },
   {
     title: 'Peak Mind: Find Your Focus, Own Your Attention, Invest 12 Minutes a Day',
@@ -53,6 +63,8 @@ export const myLibrary: Book[] = [
     publisher: 'HarperOne',
     published_date: '10-19-2021',
     summary: 'Elit velit provident eaque odit iste.',
-    cover_image_url: 'src/assets/bookCovers/Peak_Mind_Find_Your_Focus.png'
+    cover_image_url: 'src/assets/bookCovers/Peak_Mind_Find_Your_Focus.png',
+    is_favorite: false,
+    read: false
   }
 ]
