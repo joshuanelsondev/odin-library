@@ -14,7 +14,7 @@ export default function Sidebar ({ currentBook, toggleFavorite }: SidebarProps) 
       <>
       <h3 className='sidebar__header'>About This Book</h3>
       <img className='sidebar__book' src={currentBook.cover_image_url} alt={`${currentBook.title} book cover`}/>
-      <FaHeart className='sidebar__heart' onClick={() => toggleFavorite(currentBook.isbn)}/>
+      <FaHeart className={`sidebar__heart ${currentBook.is_favorite && 'sidebar__favorite'}`} onClick={() => toggleFavorite(currentBook.isbn)}/>
       <p className='sidebar__info'>Title:<span className='sidebar__text'>{currentBook.title}</span></p>
       <p className='sidebar__info'>Author(s):<span className='sidebar__text'>{currentBook.author}</span></p>
       <p className='sidebar__info'>ISBN:<span className='sidebar__text'>{currentBook.isbn}</span></p>

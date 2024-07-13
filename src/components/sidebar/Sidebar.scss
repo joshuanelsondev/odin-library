@@ -39,6 +39,10 @@
     cursor: pointer;
   }
 
+  &__favorite {
+    color: red;
+  }
+
   &__info {
     display: grid;
     font-weight: 700;
