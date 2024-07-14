@@ -11,7 +11,10 @@ export default function Browse ({ myLibrary, currentBook, setCurrentBook }: Brow
 
   return (
     <div className='browse'>
-      <h2 className='browse__header'>Browse The Library</h2>
+      <div className='browse__heading'>
+        <h2 className='browse__header'>Browse The Library</h2>
+        <button className='browse__add'>Add Book</button>
+      </div>
       <div className='browse__filter'>
       </div>
       <div className='books'>
