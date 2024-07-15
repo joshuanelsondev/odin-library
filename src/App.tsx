@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Book } from './types/Book'
-import { myLibrary as initialLibrary } from './components/browse/library.ts'
+import { myLibrary as initialLibrary } from './assets/library.ts'
 import Browse from './components/browse/Browse'
 import Header from './components/header/Header'
 import Sidebar from './components/sidebar/Sidebar'
