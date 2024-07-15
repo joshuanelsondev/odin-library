@@ -1,5 +1,7 @@
 import './Browse.scss'
+import { useState } from 'react'
 import { Book } from '../../types/Book'
+import AddBookForm from '../addBook/AddBookForm'
 
 interface BrowseProps {
   myLibrary: Book[]
@@ -8,12 +10,14 @@ interface BrowseProps {
 }
 
 export default function Browse ({ myLibrary, currentBook, setCurrentBook }: BrowseProps) {
+  const [formVisibility, setFormVisibility] = useState<boolean>(false)
+
 
   return (
     <div className='browse'>
       <div className='browse__heading'>
         <h2 className='browse__header'>Browse The Library</h2>
-        <button className='browse__add'>Add Book</button>
+        <button className='browse__add' onClick={() => setFormVisibility(true)}>Add Book</button>
       </div>
       <div className='browse__filter'>
       </div>
@@ -62,6 +66,7 @@ export default function Browse ({ myLibrary, currentBook, setCurrentBook }: Brow
           )
         })}
       </div>
+      {formVisibility && <AddBookForm setFormVisibility={setFormVisibility} />}
     </div>
   )
 }
