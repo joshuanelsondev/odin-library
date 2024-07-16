@@ -14,14 +14,11 @@ export default function AddBookForm ({ setFormVisibility }: FormProps) {
   }
 
   return (
-    <div className='addbook-container'>
-      <form className='addbook-form' onSubmit={handleSubmit}>
-        <div>
-          <h2>Add Book</h2>
-          <LuX onClick={() => setFormVisibility(false)} />
-        </div>
-
-        <button type='submit'>Submit</button>
+    <div className='addbook'>
+      <form className='addbook__form' onSubmit={handleSubmit}>
+        <h2>Add Book</h2>
+        <LuX className='addbook__close' onClick={() => setFormVisibility(false)} />
+        <button className='addbook__submit' type='submit'>Submit</button>
       </form>
     </div>
   )

@@ -1,4 +1,4 @@
-.addbook-container {
+.addbook {
   position: fixed;
   top: 0;
   left: 0;
@@ -6,4 +6,19 @@
   height: 100vh;
   width: 100vw;
   z-index: 10;
+
+  &__form {
+    border: 1px solid silver;
+    height: 25em;
+    eifthhz: 50em;
+  }
+
+  &__close {
+    cursor: pointer;
+  }
+
+  &__submit {
+    cursor: pointer;
+  }
+
 }
