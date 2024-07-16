@@ -1,23 +1,39 @@
+.formModal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00000063;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  overflow-y: hidden;
+}
+
 .formModal {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 25em;
-  width: 40em;
+  width: 30em;
   max-width: 100%;
   max-width: 100%;
   background-color: #E1EBFF;
-  border-radius: 1em;
-  padding: 1em 4em;
+  border-radius: 0.8em;
+  padding: 2em;
   box-sizing: border-box;
-  z-index: 10;
+  color: #4C72C4;
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__header {
+    margin-top: 0;
+  }
 
   &__close {
     cursor: pointer;
-    position: absolute;
-    top: 1em;
-    right: 1em;
   }
 
   &__submit {

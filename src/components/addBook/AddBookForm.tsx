@@ -14,6 +14,7 @@ export default function AddBookForm ({ setFormVisibility }: FormProps) {
   }
 
   return (
+    <div className='formModal-container'>
       <form className='formModal' onSubmit={handleSubmit}>
         <div className='formModal__heading'>
           <h2 className='formModal__header'>Add Book</h2>
@@ -25,5 +26,6 @@ export default function AddBookForm ({ setFormVisibility }: FormProps) {
           <button className='formModal__submit' type='submit'>Add Book</button>
         </div>
       </form>
+    </div>
   )
 }
