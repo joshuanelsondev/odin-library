@@ -14,12 +14,16 @@ export default function AddBookForm ({ setFormVisibility }: FormProps) {
   }
 
   return (
-    <div className='addbook'>
-      <form className='addbook__form' onSubmit={handleSubmit}>
-        <h2>Add Book</h2>
-        <LuX className='addbook__close' onClick={() => setFormVisibility(false)} size={20} />
-        <button className='addbook__submit' type='submit'>Submit</button>
+      <form className='formModal' onSubmit={handleSubmit}>
+        <div className='formModal__heading'>
+          <h2 className='formModal__header'>Add Book</h2>
+          <LuX className='formModal__close' onClick={() => setFormVisibility(false)} size={20} />
+        </div>
+        <div className='formModal__body'></div>
+        <div className='formModal__footer'>
+          <button className='formModal__cancel' type='submit'>Cancel</button>
+          <button className='formModal__submit' type='submit'>Add Book</button>
+        </div>
       </form>
-    </div>
   )
 }

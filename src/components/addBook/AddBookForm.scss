@@ -1,25 +1,17 @@
-.addbook {
+.formModal {
   position: fixed;
-  top: 0;
-  left: 0;
-  background-color: black;
-  height: 100vh;
-  width: 100vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 25em;
+  width: 40em;
+  max-width: 100%;
+  max-width: 100%;
+  background-color: #E1EBFF;
+  border-radius: 1em;
+  padding: 1em 4em;
+  box-sizing: border-box;
   z-index: 10;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-
-  &__form {
-    border: 1px solid silver;
-    border-radius: 1em;
-    height: 25em;
-    width: 50em;
-    min-width: fit-content;
-    padding: 1em 4em;
-    box-sizing: border-box;
-    position: relative;
-  }
 
   &__close {
     cursor: pointer;
@@ -31,5 +23,4 @@
   &__submit {
     cursor: pointer;
   }
-
 }
