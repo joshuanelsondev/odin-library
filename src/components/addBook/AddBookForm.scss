@@ -6,15 +6,26 @@
   height: 100vh;
   width: 100vw;
   z-index: 10;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 
   &__form {
     border: 1px solid silver;
+    border-radius: 1em;
     height: 25em;
-    eifthhz: 50em;
+    width: 50em;
+    min-width: fit-content;
+    padding: 1em 4em;
+    box-sizing: border-box;
+    position: relative;
   }
 
   &__close {
     cursor: pointer;
+    position: absolute;
+    top: 1em;
+    right: 1em;
   }
 
   &__submit {

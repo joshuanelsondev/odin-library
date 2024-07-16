@@ -17,7 +17,7 @@ export default function AddBookForm ({ setFormVisibility }: FormProps) {
     <div className='addbook'>
       <form className='addbook__form' onSubmit={handleSubmit}>
         <h2>Add Book</h2>
-        <LuX className='addbook__close' onClick={() => setFormVisibility(false)} />
+        <LuX className='addbook__close' onClick={() => setFormVisibility(false)} size={20} />
         <button className='addbook__submit' type='submit'>Submit</button>
       </form>
     </div>
