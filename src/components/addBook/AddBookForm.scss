@@ -1,3 +1,5 @@
+$inputColor: white;
+
 .formModal-container {
   position: fixed;
   top: 0;
@@ -10,6 +12,9 @@
 }
 
 .formModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -32,15 +37,13 @@
     margin-top: 0;
   }
 
-  &__close {
+  &__close, &__submit, &__cancel {
     cursor: pointer;
   }
 
-  &__submit {
-    cursor: pointer;
-  }
-
-  &__cancel {
-    cursor: pointer;
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
   }
 }
