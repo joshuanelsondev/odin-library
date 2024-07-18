@@ -29,6 +29,12 @@ $inputColor: white;
   box-sizing: border-box;
   color: #4C72C4;
 
+  input[type=text], input[type=month], input[typ=url], textarea {
+    background-color: white;
+    border: none;
+    border-radius: 0.2em;
+  }
+
   &__heading {
     display: flex;
     justify-content: space-between;
