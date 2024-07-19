@@ -1,4 +1,6 @@
-import { LuX } from "react-icons/lu";
+import { useState } from 'react'
+import { Book } from '../../types/Book'
+import { LuX } from "react-icons/lu"
 import './AddBookForm.scss'
 
 interface FormProps {
@@ -6,6 +8,7 @@ interface FormProps {
 }
 
 export default function AddBookForm ({ setFormVisibility }: FormProps) {
+  const [book, setBook] = useState<Book[] | null>(null)
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault()
