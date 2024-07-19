@@ -8,7 +8,17 @@ interface FormProps {
 }
 
 export default function AddBookForm ({ setFormVisibility }: FormProps) {
-  const [book, setBook] = useState<Book[] | null>(null)
+  const [book, setBook] = useState<Book>({
+    title: '',
+    author: '',
+    isbn: '',
+    publisher: '',
+    published_date: '',
+    summary: '',
+    cover_image_url: '',
+    is_favorite: false,
+    read: false,
+  })
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault()
@@ -47,6 +57,14 @@ export default function AddBookForm ({ setFormVisibility }: FormProps) {
           <div className='formModal__input-container'>
             <label htmlFor="book-cover-url">Book Cover Url: </label>
             <input type="url" />
+          </div>
+          <div>
+            <label htmlFor="favorite">Favorite: </label>
+            <input type="checkbox" id='favorite' name='favorite' />
+          </div>
+          <div>
+            <label htmlFor="read">Read: </label>
+            <input type="checkbox" id='read' name='read' />
           </div>
           <div className='formModal__summary'>
             <label htmlFor="summary">Summary: </label>
