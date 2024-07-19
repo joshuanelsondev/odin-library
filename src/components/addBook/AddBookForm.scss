@@ -25,7 +25,6 @@ $inputColor: white;
   height: fit-content;
   width: 30em;
   max-width: 100%;
-  max-width: 100%;
   background-color: $secondaryColor;
   border-radius: 0.8em;
   padding: 2em;
@@ -36,7 +35,7 @@ $inputColor: white;
   &__body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2em;
+    gap: 1em;
   }
 
   [type=text], [type=date], [type=url], textarea {

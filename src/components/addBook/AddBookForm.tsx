@@ -51,7 +51,7 @@ export default function AddBookForm ({ setFormVisibility }: FormProps) {
           </div>
         </div>
         <div className='formModal__footer'>
-          <button className='formModal__cancel' type='submit'>Cancel</button>
+          <button className='formModal__cancel' type='button' onClick={() => setFormVisibility(false)}>Cancel</button>
           <button className='formModal__submit' type='submit'>Add Book</button>
         </div>
       </form>
