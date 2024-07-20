@@ -59,6 +59,10 @@ $inputColor: white;
     font-weight: 600;
   }
 
+  [type=checkbox] {
+    cursor: pointer;
+  }
+
   &__summary {
     grid-column: 1 / 3;
   }
