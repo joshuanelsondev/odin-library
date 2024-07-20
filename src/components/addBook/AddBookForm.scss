@@ -79,6 +79,24 @@ $inputColor: white;
     cursor: pointer;
   }
 
+  &__cancel {
+    background: red;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: .5em 2em;
+    box-sizing: border-box;
+  }
+
+  &__submit {
+    background: green;
+    border: none;
+    font-weight: 600;
+    border-radius: 0.2em;
+    padding: .5em 2em;
+    box-sizing: border-box;
+  }
+
   &__footer {
     display: flex;
     justify-content: flex-end;
