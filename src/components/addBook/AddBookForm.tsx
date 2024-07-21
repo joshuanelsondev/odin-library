@@ -69,11 +69,11 @@ export default function AddBookForm ({ setFormVisibility }: FormProps) {
             <label htmlFor="cover_image_url">Book Cover Url: </label>
             <input type="url" id='cover_image_url' name='cover_image_url' value={book.cover_image_url} onChange={handleTextChange} required />
           </div>
-          <div>
+          <div className='formModal__checkbox-container'>
             <label htmlFor="favorite">Favorite: </label>
             <input type="checkbox" id='favorite' name='favorite' checked={book.favorite} onChange={handleCheckboxChange} />
           </div>
-          <div>
+          <div className='formModal__checkbox-container'>
             <label htmlFor="read">Read: </label>
             <input type="checkbox" id='read' name='read' checked={book.read} onChange={handleCheckboxChange}/>
           </div>

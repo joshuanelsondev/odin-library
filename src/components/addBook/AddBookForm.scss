@@ -1,6 +1,9 @@
 $primaryColor: #4C72C4;
 $secondaryColor: #E1EBFF;
 $inputColor: white;
+$unchecked-color: #ffcccc;
+$checked-color: #4caf50;
+$border-color: #ccc;
 
 .formModal-container {
   position: fixed;
@@ -59,8 +62,33 @@ $inputColor: white;
     font-weight: 600;
   }
 
-  [type=checkbox] {
-    cursor: pointer;
+  &__checkbox-container {
+    input[type=checkbox] {
+      display: none;
+    }
+
+    label {
+      position: relative;
+      cursor: pointer;
+      paddikng-right: 25px;
+      user-select: none;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        border: 2px solid $border-color;
+        background-color: $unchecked-color;
+        transition: background-color 0.2a ease;
+      }
+    }
+
+    input[type="checkbox"]:checked + label::after {
+      background-color: $checked-color; /* Background color for checked state */
+    }
   }
 
   &__summary {
