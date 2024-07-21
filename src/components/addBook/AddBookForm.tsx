@@ -47,27 +47,27 @@ export default function AddBookForm ({ setFormVisibility }: FormProps) {
         <div className='formModal__body'>
           <div className='formModal__input-container'>
             <label htmlFor="title">Title: </label>
-            <input type="text" id='title' name='title' value={book.title} onChange={handleTextChange}  />
+            <input type="text" id='title' name='title' value={book.title} onChange={handleTextChange}  required />
           </div>
           <div className='formModal__input-container'>
             <label htmlFor="author">Author: </label>
-            <input type="text" id='author' name='author' value={book.author} onChange={handleTextChange}/>
+            <input type="text" id='author' name='author' value={book.author} onChange={handleTextChange} required />
           </div>
           <div className='formModal__input-container'>
             <label htmlFor="isbn">ISBN: </label>
-            <input type="text" id='isbn' name='isbn' value={book.isbn} onChange={handleTextChange}/>
+            <input type="text" id='isbn' name='isbn' value={book.isbn} onChange={handleTextChange} required />
           </div>
           <div className='formModal__input-container'>
             <label htmlFor="publisher">Publisher: </label>
-            <input type="text" id='publisher' name='publisher' value={book.publisher} onChange={handleTextChange}/>
+            <input type="text" id='publisher' name='publisher' value={book.publisher} onChange={handleTextChange} required />
           </div>
           <div className='formModal__input-container'>
             <label htmlFor="published_date">Published Date: </label>
-            <input type="date" id='published_date' name='published_date' value={book.published_date} onChange={handleTextChange}/>
+            <input type="date" id='published_date' name='published_date' value={book.published_date} onChange={handleTextChange} required />
           </div>
           <div className='formModal__input-container'>
             <label htmlFor="cover_image_url">Book Cover Url: </label>
-            <input type="url" id='cover_image_url' name='cover_image_url' value={book.cover_image_url} onChange={handleTextChange}/>
+            <input type="url" id='cover_image_url' name='cover_image_url' value={book.cover_image_url} onChange={handleTextChange} required />
           </div>
           <div>
             <label htmlFor="favorite">Favorite: </label>
