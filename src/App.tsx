@@ -15,13 +15,13 @@ function App() {
   const toggleFavorite = (isbn: string) => {
       setMyLibrary((prevLibrary) =>
         prevLibrary.map((book) =>
-          book.isbn === isbn ? { ...book, is_favorite: !book.is_favorite } : book
+          book.isbn === isbn ? { ...book, favorite: !book.favorite } : book
         )
       );
 
       if (currentBook && currentBook.isbn === isbn) {
         setCurrentBook((prevBook) =>
-          prevBook ? { ...prevBook, is_favorite: !prevBook.is_favorite } : prevBook
+          prevBook ? { ...prevBook, favorite: !prevBook.favorite } : prevBook
         );
       }
     };
