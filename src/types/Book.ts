@@ -6,6 +6,6 @@ export interface Book {
  published_date: string
  summary: string
  cover_image_url: string
- is_favorite: boolean
+ favorite: boolean
  read: boolean
 }

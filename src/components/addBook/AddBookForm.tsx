@@ -16,13 +16,19 @@ export default function AddBookForm ({ setFormVisibility }: FormProps) {
     published_date: '',
     summary: '',
     cover_image_url: '',
-    is_favorite: false,
+    favorite: false,
     read: false,
   })
+
+  const handleFormChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target
+    setBook({...book, [name]: value})
+  }
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault()
 
+    console.log(book)
     setFormVisibility(false)
   }
 
