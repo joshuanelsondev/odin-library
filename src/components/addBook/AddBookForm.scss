@@ -50,6 +50,11 @@ $unchecked-color: white;
     box-sizing: border-box;
     box-shadow: 0 1px 1px lightgray;
 
+    &::-webkit-calendar-picker-indicator {
+      cursor: pointer;
+      filter: invert(1);
+    }
+
     &:focus {
       outline: 1px solid $primaryColor;
     }
@@ -106,6 +111,7 @@ $unchecked-color: white;
 
   }
 }
+
 
   &__summary {
     grid-column: 1 / 3;
