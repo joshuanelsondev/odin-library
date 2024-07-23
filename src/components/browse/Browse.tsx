@@ -1,16 +1,14 @@
 import './Browse.scss'
-import { useState } from 'react'
 import { Book } from '../../types/Book'
-import AddBookForm from '../addBook/AddBookForm'
 
 interface BrowseProps {
   myLibrary: Book[]
   currentBook: Book | null
   setCurrentBook: (book: Book | null) => void
+  setFormVisibility: (visibility: boolean) => void
 }
 
-export default function Browse ({ myLibrary, currentBook, setCurrentBook }: BrowseProps) {
-  const [formVisibility, setFormVisibility] = useState<boolean>(false)
+export default function Browse ({ myLibrary, currentBook, setCurrentBook, setFormVisibility }: BrowseProps) {
 
 
   return (
@@ -66,7 +64,6 @@ export default function Browse ({ myLibrary, currentBook, setCurrentBook }: Brow
           )
         })}
       </div>
-      {formVisibility && <AddBookForm setFormVisibility={setFormVisibility} />}
     </div>
   )
 }
