@@ -5,9 +5,10 @@ import './AddBookForm.scss'
 
 interface FormProps {
   setFormVisibility: (visibility: boolean) => void
+  addBook: (book: Book) => void
 }
 
-export default function AddBookForm ({ setFormVisibility }: FormProps) {
+export default function AddBookForm ({ setFormVisibility, addBook }: FormProps) {
   const [book, setBook] = useState<Book>({
     title: '',
     author: '',
@@ -33,6 +34,7 @@ export default function AddBookForm ({ setFormVisibility }: FormProps) {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault()
 
+    addBook(book)
     console.log(book)
     setFormVisibility(false)
   }

@@ -11,6 +11,7 @@ function App() {
 
   const [currentBook, setCurrentBook] = useState<Book | null>(null)
   const [myLibrary, setMyLibrary] = useState<Book[]>(initialLibrary)
+  const [formVisibility, setFormVisibility] = useState<boolean>(false)
 
   const toggleFavorite = (isbn: string) => {
       setMyLibrary((prevLibrary) =>
@@ -31,6 +32,9 @@ function App() {
         <Header />
         <Browse myLibrary={myLibrary} currentBook={currentBook} setCurrentBook={setCurrentBook} />
         <Sidebar currentBook={currentBook} toggleFavorite={toggleFavorite} />
+        {formVisibility && (
+          <AddBookForm setFormVisibility={setFormVisibility} addBook={addBook} />
+        )}
       </main>
     )
   }
