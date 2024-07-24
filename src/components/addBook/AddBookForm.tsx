@@ -116,7 +116,7 @@ export default function AddBookForm ({ setFormVisibility, addBook }: FormProps) 
           <div className='formModal__input-container'>
             <label htmlFor="cover_image_url">Book Cover Url: </label>
             <input type="url" id='cover_image_url' name='cover_image_url' value={book.cover_image_url} onChange={handleTextChange} onBlur={handleBlur} />
-            {errors.url && <span className='formModal__error'>{errors.url}</span>}
+            {errors.cover_image_url && <span className='formModal__error'>{errors.cover_image_url}</span>}
           </div>
           <div className='formModal__checkbox-container'>
             <label htmlFor="favorite">Favorite: </label>
@@ -129,8 +129,8 @@ export default function AddBookForm ({ setFormVisibility, addBook }: FormProps) 
           <div className='formModal__summary'>
             <label htmlFor="summary">Summary: </label>
             <textarea id="summary" name="summary" value={book.summary} onChange={handleTextChange} cols={30} rows={10} onBlur={handleBlur}></textarea>
-          </div>
             {errors.summary && <span className='formModal__error'>{errors.summary}</span>}
+          </div>
         </div>
         <div className='formModal__footer'>
           <button className='formModal__cancel' type='button' onClick={() => setFormVisibility(false)}>Cancel</button>
