@@ -40,6 +40,15 @@ $unchecked-color: white;
     gap: 1em;
   }
 
+  input {
+    height: 2em;
+    width: auto;
+  }
+
+  textarea {
+    resize: none;
+  }
+
   [type=text], [type=date], [type=url], textarea {
     background-color: $inputColor;
     color: black;
@@ -60,8 +69,13 @@ $unchecked-color: white;
     }
   }
 
+  &__input-container {
+    height: 6em;
+  }
+
   &__input-container, &__summary {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 4px;
     font-size: .8em;
     font-weight: 600;
@@ -70,6 +84,8 @@ $unchecked-color: white;
   &__checkbox-container {
     display: flex;
     align-items: center;
+    font-size: .8em;
+    font-weight: 600;
 
 
     input[type="checkbox"] {

@@ -30,8 +30,7 @@ export default function AddBookForm ({ setFormVisibility, addBook }: FormProps) 
       isbn: 'ISBN is required',
       publisher: 'Publisher is required',
       published_date: 'Published date is required',
-      cover_image_url: 'Cover image URL is required',
-      summary: 'Summary is required',
+      cover_image_url: 'A valid cover image URL is required',
     }
 
     const newErrors: { [key: string]: string } = {}
@@ -66,7 +65,7 @@ export default function AddBookForm ({ setFormVisibility, addBook }: FormProps) 
     setBook({...book, [id]: checked})
   }
 
-  const handleBlur = (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
     validate(event.target.id as keyof Book)
   }
 
@@ -91,32 +90,32 @@ export default function AddBookForm ({ setFormVisibility, addBook }: FormProps) 
           <div className='formModal__input-container'>
             <label htmlFor="title">Title: </label>
             <input type="text" id='title' name='title' value={book.title} onChange={handleTextChange}  onBlur={handleBlur} />
-            {errors.title && <span className='formModal__error'>{errors.title}</span>}
+            {<span className={`formModal__error`}>{errors.title}</span>}
           </div>
           <div className='formModal__input-container'>
             <label htmlFor="author">Author: </label>
             <input type="text" id='author' name='author' value={book.author} onChange={handleTextChange} onBlur={handleBlur} />
-            {errors.author && <span className='formModal__error'>{errors.author}</span>}
+            {<span className={`formModal__error`}>{errors.author}</span>}
           </div>
           <div className='formModal__input-container'>
             <label htmlFor="isbn">ISBN: </label>
             <input type="text" id='isbn' name='isbn' value={book.isbn} onChange={handleTextChange} onBlur={handleBlur}/>
-            {errors.isbn && <span className='formModal__error'>{errors.isbn}</span>}
+            {<span className={`formModal__error`}>{errors.isbn}</span>}
           </div>
           <div className='formModal__input-container'>
             <label htmlFor="publisher">Publisher: </label>
             <input type="text" id='publisher' name='publisher' value={book.publisher} onChange={handleTextChange} onBlur={handleBlur} />
-            {errors.publisher && <span className='formModal__error'>{errors.publisher}</span>}
+            {<span className={`formModal__error`}>{errors.publisher}</span>}
           </div>
           <div className='formModal__input-container'>
             <label htmlFor="published_date">Published Date: </label>
             <input type="date" id='published_date' name='published_date' value={book.published_date} onChange={handleTextChange} onBlur={handleBlur} />
-            {errors.published_date && <span className='formModal__error'>{errors.published_date}</span>}
+            {<span className={`formModal__error`}>{errors.published_date}</span>}
           </div>
           <div className='formModal__input-container'>
             <label htmlFor="cover_image_url">Book Cover Url: </label>
             <input type="url" id='cover_image_url' name='cover_image_url' value={book.cover_image_url} onChange={handleTextChange} onBlur={handleBlur} />
-            {errors.cover_image_url && <span className='formModal__error'>{errors.cover_image_url}</span>}
+            {<span className={`formModal__error`}>{errors.cover_image_url}</span>}
           </div>
           <div className='formModal__checkbox-container'>
             <label htmlFor="favorite">Favorite: </label>
@@ -128,8 +127,7 @@ export default function AddBookForm ({ setFormVisibility, addBook }: FormProps) 
           </div>
           <div className='formModal__summary'>
             <label htmlFor="summary">Summary: </label>
-            <textarea id="summary" name="summary" value={book.summary} onChange={handleTextChange} cols={30} rows={10} onBlur={handleBlur}></textarea>
-            {errors.summary && <span className='formModal__error'>{errors.summary}</span>}
+            <textarea id="summary" name="summary" value={book.summary} onChange={handleTextChange} cols={30} rows={10}></textarea>
           </div>
         </div>
         <div className='formModal__footer'>
