@@ -21,6 +21,8 @@ export default function AddBookForm ({ setFormVisibility, addBook }: FormProps) 
     read: false,
   })
 
+  const [errors, setErrors] = useState<{ [key: string]: string }>({})
+
   const handleTextChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = event.target
     setBook({...book, [id]: value})
@@ -31,12 +33,46 @@ export default function AddBookForm ({ setFormVisibility, addBook }: FormProps) 
     setBook({...book, [id]: checked})
   }
 
+  const validate = (field?: keyof Book) => {
+    const validationMessages: { [key: string]: string} = {
+      title: 'Title is required',
+      author: 'Author is required',
+      isbn: 'ISBN is required',
+      publisher: 'Publisher is required',
+      published_date: 'Published date is required',
+      cover_image_url: 'Cover image URL is required',
+      summary: 'Summary is required',
+    }
+
+    const newErrors: { [key: string]: string } = {}
+
+    if (!field) {
+      Object.keys(validationMessages).forEach((key) => {
+        if (!book[key as keyof Book]) {
+          newErrors[key] = validationMessages[key]
+        }
+      })
+    } else {
+      if (!book[field]) {
+        newErrors[field] = validationMessages[field]
+      }
+    }
+
+    if (book.isbn && !/^\d{10}(\d{3})?$/.test(book.isbn)) newErrors.isbn = 'ISBN must be 10 or 13 digits.'
+    if (book.cover_image_url && !/^https?:\/\//.test(book.cover_image_url)) newErrors.cover_image_url = 'Cover image URL must be a valid URL.'
+
+    setErrors(newErrors)
+
+    return Object.keys(newErrors).length === 0
+  }
+
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault()
 
-    addBook(book)
-    console.log(book)
-    setFormVisibility(false)
+    if (validate()) {
+      addBook(book)
+      setFormVisibility(false)
+    }
   }
 
   return (
@@ -50,6 +86,7 @@ export default function AddBookForm ({ setFormVisibility, addBook }: FormProps) 
           <div className='formModal__input-container'>
             <label htmlFor="title">Title: </label>
             <input type="text" id='title' name='title' value={book.title} onChange={handleTextChange}  required />
+            {errors.title && <span>{errors.title}</span>}
           </div>
           <div className='formModal__input-container'>
             <label htmlFor="author">Author: </label>
