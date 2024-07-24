@@ -108,10 +108,16 @@ $unchecked-color: white;
       &:checked::after {
         display: block;
       }
-
   }
+
 }
 
+  &__error {
+    padding-left: 0.5em;
+    color: red;
+    font-size: 12px;
+    font-weight: 400;
+  }
 
   &__summary {
     grid-column: 1 / 3;
