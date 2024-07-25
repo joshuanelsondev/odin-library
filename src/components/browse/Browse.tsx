@@ -5,17 +5,17 @@ interface BrowseProps {
   myLibrary: Book[]
   currentBook: Book | null
   setCurrentBook: (book: Book | null) => void
-  setFormVisibility: (visibility: boolean) => void
+  setAddBookFormVisibility: (visibility: boolean) => void
 }
 
-export default function Browse ({ myLibrary, currentBook, setCurrentBook, setFormVisibility }: BrowseProps) {
+export default function Browse ({ myLibrary, currentBook, setCurrentBook, setAddBookFormVisibility }: BrowseProps) {
 
 
   return (
     <div className='browse'>
       <div className='browse__heading'>
         <h2 className='browse__header'>Browse The Library</h2>
-        <button className='browse__add' onClick={() => setFormVisibility(true)}>Add Book</button>
+        <button className='browse__add' onClick={() => setAddBookFormVisibility(true)}>Add Book</button>
       </div>
       <div className='browse__filter'>
       </div>

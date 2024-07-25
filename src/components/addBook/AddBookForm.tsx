@@ -4,11 +4,11 @@ import { LuX } from "react-icons/lu"
 import './AddBookForm.scss'
 
 interface FormProps {
-  setFormVisibility: (visibility: boolean) => void
+  setAddBookFormVisibility: (visibility: boolean) => void
   addBook: (book: Book) => void
 }
 
-export default function AddBookForm ({ setFormVisibility, addBook }: FormProps) {
+export default function AddBookForm ({ setAddBookFormVisibility, addBook }: FormProps) {
   const [book, setBook] = useState<Book>({
     title: '',
     author: '',
@@ -75,7 +75,7 @@ export default function AddBookForm ({ setFormVisibility, addBook }: FormProps) 
 
     if (validate()) {
       addBook(book)
-      setFormVisibility(false)
+      setAddBookFormVisibility(false)
     }
   }
 
@@ -84,7 +84,7 @@ export default function AddBookForm ({ setFormVisibility, addBook }: FormProps) 
       <form className='formModal' onSubmit={handleSubmit}>
         <div className='formModal__heading'>
           <h2 className='formModal__header'>Add Book</h2>
-          <LuX className='formModal__close' onClick={() => setFormVisibility(false)} size={20} />
+          <LuX className='formModal__close' onClick={() => setAddBookFormVisibility(false)} size={20} />
         </div>
         <div className='formModal__body'>
           <div className='formModal__input-container'>
@@ -131,7 +131,7 @@ export default function AddBookForm ({ setFormVisibility, addBook }: FormProps) 
           </div>
         </div>
         <div className='formModal__footer'>
-          <button className='formModal__cancel' type='button' onClick={() => setFormVisibility(false)}>Cancel</button>
+          <button className='formModal__cancel' type='button' onClick={() => setAddBookFormVisibility(false)}>Cancel</button>
           <button className='formModal__submit' type='submit'>Add Book</button>
         </div>
       </form>

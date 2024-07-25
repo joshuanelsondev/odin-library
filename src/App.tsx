@@ -4,6 +4,7 @@ import { myLibrary as initialLibrary } from './assets/library.ts'
 import AddBookForm from './components/addBook/AddBookForm.tsx'
 import Browse from './components/browse/Browse'
 import Header from './components/header/Header'
+import EditBookForm from './components/editBook/EditBookForm'
 import Sidebar from './components/sidebar/Sidebar'
 import './App.scss'
 
@@ -12,7 +13,8 @@ function App() {
 
   const [currentBook, setCurrentBook] = useState<Book | null>(null)
   const [myLibrary, setMyLibrary] = useState<Book[]>(initialLibrary)
-  const [formVisibility, setFormVisibility] = useState<boolean>(false)
+  const [addBookFormVisibility, setAddBookFormVisibility] = useState<boolean>(false)
+  const [editBookFormVisibility, setEditBookFormVisibility] = useState<boolean>(false)
 
   const addBook = (book: Book) => {
     setMyLibrary([...myLibrary, book])
@@ -35,10 +37,13 @@ function App() {
     return (
       <main className='main-container'>
         <Header />
-        <Browse myLibrary={myLibrary} currentBook={currentBook} setCurrentBook={setCurrentBook} setFormVisibility={setFormVisibility} />
+        <Browse myLibrary={myLibrary} currentBook={currentBook} setCurrentBook={setCurrentBook} setAddBookFormVisibility={setAddBookFormVisibility} />
         <Sidebar currentBook={currentBook} toggleFavorite={toggleFavorite} />
-        {formVisibility && (
-          <AddBookForm setFormVisibility={setFormVisibility} addBook={addBook} />
+        {addBookFormVisibility && (
+          <AddBookForm setAddBookFormVisibility={setAddBookFormVisibility} addBook={addBook} />
+        )}
+        {editBookFormVisibility && (
+          <EditBookForm setEditBookFormVisibility={setEditBookFormVisibility} editBook={editBook} />
         )}
       </main>
     )
