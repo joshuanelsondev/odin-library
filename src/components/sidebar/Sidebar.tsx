@@ -1,4 +1,5 @@
 import { Book } from '../../types/Book'
+import { convertDateFormat } from '../utils/dateUtils'
 import { FaHeart } from "react-icons/fa";
 import './Sidebar.scss'
 
@@ -19,7 +20,7 @@ export default function Sidebar ({ currentBook, toggleFavorite }: SidebarProps) 
       <p className='sidebar__info'>Author(s):<span className='sidebar__text'>{currentBook.author}</span></p>
       <p className='sidebar__info'>ISBN:<span className='sidebar__text'>{currentBook.isbn}</span></p>
       <p className='sidebar__info'>Publisher:<span className='sidebar__text'>{currentBook.publisher}</span></p>
-      <p className='sidebar__info'>Published Date:<span className='sidebar__text'>{currentBook.published_date}</span></p>
+      <p className='sidebar__info'>Published Date:<span className='sidebar__text'>{convertDateFormat(currentBook.published_date)}</span></p>
       <p className='sidebar__info'>Summary<span className='sidebar__text'>{currentBook.summary}</span></p>
       <button className='sidebar__button'>Check Out</button>
       </>

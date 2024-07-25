@@ -54,7 +54,7 @@ export default function Browse ({ myLibrary, currentBook, setCurrentBook, setFor
        </select>
         {myLibrary && myLibrary.map((book: Book) => {
           return (
-            <div key={book.isbn} className='book' onClick={() => setCurrentBook(book)}>
+            <div key={book.isbn} className='book' onClick={() => setCurrentBook(book)} aria-label={`Select ${book.title} by ${book.author}`} role='button' tabIndex={0}>
               <img src={book.cover_image_url} alt={`${book.title} cover`} className={`book__cover ${currentBook?.isbn === book.isbn ? 'book__selected' : ''} `} />
               <div className='book__label'>
                 <p className='book__title'>{book.title}</p>
