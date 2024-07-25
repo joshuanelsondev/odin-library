@@ -22,9 +22,9 @@ export default function Sidebar ({ currentBook, toggleFavorite }: SidebarProps) 
         <LuMoreHorizontal className='sidebar__elipsis' size={20} onClick={() => setEditDropdownVisibility(!editDropdownVisibility)} />
         {/*Edit Dropdown*/}
         {editDropdownVisibility && (
-          <div className='sidear__edit-dropdown'>
-            <p>Edit</p>
-            <p>Remove</p>
+          <div className='sidebar__edit-dropdown'>
+            <p className='sidebar__dropdown-link'>Edit</p>
+            <p className='sidebar__dropdown-link'>Remove</p>
           </div>
         )}
       </div>
