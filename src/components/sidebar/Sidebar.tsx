@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import { Book } from '../../types/Book'
 import { convertDateFormat } from '../utils/dateUtils'
 import { FaHeart } from "react-icons/fa";
+import { LuMoreHorizontal } from "react-icons/lu";
 import './Sidebar.scss'
 
 interface SidebarProps {
@@ -9,11 +11,23 @@ interface SidebarProps {
 }
 
 export default function Sidebar ({ currentBook, toggleFavorite }: SidebarProps) {
+  const [editDropdownVisibility, setEditDropdownVisibility] = useState<boolean>(false)
+
   return(
     <div className='sidebar'>
     {currentBook ? (
       <>
-      <h3 className='sidebar__header'>About This Book</h3>
+      <div className='sidebar__heading'>
+        <h3 className='sidebar__header'>About This Book</h3>
+        <LuMoreHorizontal className='sidebar__elipsis' size={20} onClick={() => setEditDropdownVisibility(!editDropdownVisibility)} />
+        {/*Edit Dropdown*/}
+        {editDropdownVisibility && (
+          <div className='sidear__edit-dropdown'>
+            <p>Edit</p>
+            <p>Remove</p>
+          </div>
+        )}
+      </div>
       <img className='sidebar__book' src={currentBook.cover_image_url} alt={`${currentBook.title} book cover`}/>
       <FaHeart className={`sidebar__heart ${currentBook.favorite && 'sidebar__favorite'}`} onClick={() => toggleFavorite(currentBook.isbn)}/>
       <p className='sidebar__info'>Title:<span className='sidebar__text'>{currentBook.title}</span></p>

@@ -16,8 +16,18 @@
     font-weight: 600;
   }
 
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
   &__header {
     margin: .5em 0;
+  }
+
+  &__elipsis {
+    cursor: pointer;
   }
 
   &__book {
