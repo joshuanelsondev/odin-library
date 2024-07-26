@@ -112,7 +112,7 @@ export default function EditBook({ setEditBookFormVisibility, editBook, currentB
           </div>
           <div className='formModal__input-container'>
             <label htmlFor="cover_image_url">Book Cover Url: </label>
-            <input type="url" id='cover_image_url' name='cover_image_url' value={selectedBook.cover_image_url} onChange={handleTextChange} onBlur={handleBlur} />
+            <input type="text" id='cover_image_url' name='cover_image_url' value={selectedBook.cover_image_url} onChange={handleTextChange} onBlur={handleBlur} />
             {<span className={`formModal__error`}>{errors.cover_image_url}</span>}
           </div>
           <div className='formModal__checkbox-container'>
