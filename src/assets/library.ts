@@ -15,7 +15,7 @@ export const myLibrary: Book[] = [
   new Book(
     'Another Kind',
     'Trevor Bream',
-    '006304353X',
+    '0063043548',
     'HarperAlley',
     '2021-10-26',
     'Amet facilis similique culpa non commodi nam? Error facere ipsa',

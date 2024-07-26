@@ -20,6 +20,8 @@ function App() {
     setMyLibrary([...myLibrary, book])
   }
 
+  const editBook = (selectedBook: Book) => { console.log(selectedBook)}
+
   const toggleFavorite = (isbn: string) => {
 
       setMyLibrary(myLibrary.map((book) =>
@@ -38,12 +40,12 @@ function App() {
       <main className='main-container'>
         <Header />
         <Browse myLibrary={myLibrary} currentBook={currentBook} setCurrentBook={setCurrentBook} setAddBookFormVisibility={setAddBookFormVisibility} />
-        <Sidebar currentBook={currentBook} toggleFavorite={toggleFavorite} />
+        <Sidebar currentBook={currentBook} toggleFavorite={toggleFavorite} setEditBookFormVisibility={setEditBookFormVisibility} />
         {addBookFormVisibility && (
           <AddBookForm setAddBookFormVisibility={setAddBookFormVisibility} addBook={addBook} />
         )}
         {editBookFormVisibility && (
-          <EditBookForm setEditBookFormVisibility={setEditBookFormVisibility} editBook={editBook} />
+          <EditBookForm setEditBookFormVisibility={setEditBookFormVisibility} editBook={editBook} currentBook={currentBook} />
         )}
       </main>
     )

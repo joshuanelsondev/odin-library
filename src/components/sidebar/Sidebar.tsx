@@ -8,9 +8,10 @@ import './Sidebar.scss'
 interface SidebarProps {
   currentBook: Book | null
   toggleFavorite: (isbn: string) => void
+  setEditBookFormVisibility: (visibility: boolean) => void
 }
 
-export default function Sidebar ({ currentBook, toggleFavorite }: SidebarProps) {
+export default function Sidebar ({ currentBook, toggleFavorite, setEditBookFormVisibility }: SidebarProps) {
   const [editDropdownVisibility, setEditDropdownVisibility] = useState<boolean>(false)
 
   return(
@@ -23,7 +24,7 @@ export default function Sidebar ({ currentBook, toggleFavorite }: SidebarProps) 
         {/*Edit Dropdown*/}
         {editDropdownVisibility && (
           <div className='sidebar__edit-dropdown'>
-            <p className='sidebar__dropdown-link'>Edit</p>
+            <p className='sidebar__dropdown-link' onClick={() => setEditBookFormVisibility(true)}>Edit</p>
             <p className='sidebar__dropdown-link'>Remove</p>
           </div>
         )}
