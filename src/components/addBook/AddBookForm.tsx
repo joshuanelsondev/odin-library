@@ -91,7 +91,7 @@ export default function AddBookForm({
       setTimeout(() => {
         setAddBookFormVisibility(false);
         setConfirmationVisibility(true);
-      }, 3000)
+      }, 2000);
     }
   };
 
@@ -236,8 +236,8 @@ export default function AddBookForm({
       )}
       {/* Add Book Confirmation */}
       {confirmationVisibility && (
-        <div>
-          <p>{bookTitle} has been added</p>
+        <div className="addBook-confirm">
+          <p className="addBook-confirm__text">{bookTitle} has been added</p>
         </div>
       )}
     </div>
