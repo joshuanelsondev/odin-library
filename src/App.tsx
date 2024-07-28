@@ -33,6 +33,7 @@ function App() {
 
   const removeBook = (isbn: string) => {
     setMyLibrary(myLibrary.filter((book) => book.isbn !== isbn))
+    setCurrentBook(null)
   }
 
   const toggleFavorite = (isbn: string) => {

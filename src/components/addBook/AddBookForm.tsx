@@ -247,7 +247,7 @@ export default function AddBookForm({
           </div>
         </form>
       )}
-      {/* Add Book Confirmation */}
+      {/* Add Book Confirmation modal */}
       {confirmationVisibility && (
         <div className="addBook-confirm">
           <p className="addBook-confirm__text">{bookTitle} has been added</p>
