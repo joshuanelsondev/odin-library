@@ -24,7 +24,10 @@ export default function Sidebar ({ currentBook, toggleFavorite, setEditBookFormV
         {/*Edit Dropdown*/}
         {editDropdownVisibility && (
           <div className='sidebar__edit-dropdown'>
-            <p className='sidebar__dropdown-link' onClick={() => setEditBookFormVisibility(true)}>Edit</p>
+            <p className='sidebar__dropdown-link' onClick={() => {
+              setEditDropdownVisibility(false)
+              setEditBookFormVisibility(true)
+            }}>Edit</p>
             <p className='sidebar__dropdown-link'>Remove</p>
           </div>
         )}
