@@ -18,6 +18,7 @@ function App() {
 
   const addBook = (book: Book) => {
     setMyLibrary([...myLibrary, book])
+    setCurrentBook(book)
   }
 
   const editBook = (updatedBook: Book) => {
@@ -28,6 +29,10 @@ function App() {
     )
 
     setCurrentBook(updatedBook)
+  }
+
+  const removeBook = (isbn: string) => {
+    setMyLibrary(myLibrary.filter((book) => book.isbn !== isbn))
   }
 
   const toggleFavorite = (isbn: string) => {
@@ -57,6 +62,7 @@ function App() {
         currentBook={currentBook}
         toggleFavorite={toggleFavorite}
         setEditBookFormVisibility={setEditBookFormVisibility}
+        removeBook={removeBook}
       />
       {addBookFormVisibility && (
         <AddBookForm
