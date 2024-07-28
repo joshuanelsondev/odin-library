@@ -1,99 +1,112 @@
-import { useState } from "react";
-import { Book } from "../../types/Book";
-import { LuX } from "react-icons/lu";
-import "./AddBookForm.scss";
+import { useState } from 'react'
+import { Book } from '../../types/Book'
+import { LuX } from 'react-icons/lu'
+import './AddBookForm.scss'
 
 interface FormProps {
-  setAddBookFormVisibility: (visibility: boolean) => void;
-  addBook: (book: Book) => void;
+  setAddBookFormVisibility: (visibility: boolean) => void
+  addBook: (book: Book) => void
+  myLibrary: Book[]
 }
 
 export default function AddBookForm({
   setAddBookFormVisibility,
   addBook,
+  myLibrary,
 }: FormProps) {
   const [book, setBook] = useState<Book>({
-    title: "",
-    author: "",
-    isbn: "",
-    publisher: "",
-    published_date: "",
-    summary: "",
-    cover_image_url: "",
+    title: '',
+    author: '',
+    isbn: '',
+    publisher: '',
+    published_date: '',
+    summary: '',
+    cover_image_url: '',
     favorite: false,
     read: false,
-  });
+  })
 
-  const [bookTitle, setBookTitle] = useState<string>("");
+  const [bookTitle, setBookTitle] = useState<string>('')
 
   const [confirmationVisibility, setConfirmationVisibility] =
-    useState<boolean>(false);
+    useState<boolean>(false)
 
-  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [errors, setErrors] = useState<{ [key: string]: string }>({})
 
   const validate = (field?: keyof Book) => {
     const validationMessages: { [key: string]: string } = {
-      title: "Title is required",
-      author: "Author is required",
-      isbn: "ISBN is required",
-      publisher: "Publisher is required",
-      published_date: "Published date is required",
-      cover_image_url: "A valid cover image URL is required",
-    };
+      title: 'Title is required',
+      author: 'Author is required',
+      isbn: 'ISBN is required',
+      publisher: 'Publisher is required',
+      published_date: 'Published date is required',
+      cover_image_url: 'A valid cover image URL is required',
+    }
 
-    const newErrors: { [key: string]: string } = {};
+    const newErrors: { [key: string]: string } = {}
 
     if (!field) {
       Object.keys(validationMessages).forEach((key) => {
         if (!book[key as keyof Book]) {
-          newErrors[key] = validationMessages[key];
+          newErrors[key] = validationMessages[key]
         }
-      });
+      })
     } else {
       if (!book[field]) {
-        newErrors[field] = validationMessages[field];
+        newErrors[field] = validationMessages[field]
       }
     }
 
-    if (book.isbn && !/^\d{10}(\d{3})?$/.test(book.isbn))
-      newErrors.isbn = "ISBN must be 10 or 13 digits.";
-    if (book.cover_image_url && !/^https?:\/\//.test(book.cover_image_url))
-      newErrors.cover_image_url = "Cover image URL must be a valid URL.";
+    if (book.isbn && !/^\d{10}(\d{3})?$/.test(book.isbn)) {
+      newErrors.isbn = 'ISBN must be 10 or 13 digits.'
+    }
 
-    setErrors(newErrors);
+    if (checkForDuplicateIsbn(book.isbn)) {
+      newErrors.isbn = 'ISBN already exists.'
+    }
 
-    return Object.keys(newErrors).length === 0;
-  };
+    if (book.cover_image_url && !/^https?:\/\//.test(book.cover_image_url)) {
+      newErrors.cover_image_url = 'Cover image URL must be a valid URL.'
+    }
+
+    setErrors(newErrors)
+
+    return Object.keys(newErrors).length === 0
+  }
+
+  const checkForDuplicateIsbn = (isbn: string) => {
+    return myLibrary.some((bookEle: Book) => bookEle.isbn == isbn)
+  }
 
   const handleTextChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { id, value } = event.target;
-    setBook({ ...book, [id]: value });
-  };
+    const { id, value } = event.target
+    setBook({ ...book, [id]: value })
+  }
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { id, checked } = event.target;
-    setBook({ ...book, [id]: checked });
-  };
+    const { id, checked } = event.target
+    setBook({ ...book, [id]: checked })
+  }
 
   const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
-    validate(event.target.id as keyof Book);
-  };
+    validate(event.target.id as keyof Book)
+  }
 
   const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
+    event.preventDefault()
 
     if (validate()) {
-      setBookTitle(book.title);
-      addBook(book);
-      setConfirmationVisibility(true);
+      setBookTitle(book.title)
+      addBook(book)
+      setConfirmationVisibility(true)
       setTimeout(() => {
-        setAddBookFormVisibility(false);
-        setConfirmationVisibility(true);
-      }, 2000);
+        setAddBookFormVisibility(false)
+        setConfirmationVisibility(true)
+      }, 2000)
     }
-  };
+  }
 
   return (
     <div className="formModal-container">
@@ -241,5 +254,5 @@ export default function AddBookForm({
         </div>
       )}
     </div>
-  );
+  )
 }
