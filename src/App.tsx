@@ -20,8 +20,14 @@ function App() {
     setMyLibrary([...myLibrary, book])
   }
 
-  const editBook = (selectedBook: Book) => {
-    console.log(selectedBook)
+  const editBook = (updatedBook: Book) => {
+    setMyLibrary(
+      myLibrary.map((book) =>
+        book.isbn === updatedBook.isbn ? updatedBook : book
+      )
+    )
+
+    setCurrentBook(updatedBook)
   }
 
   const toggleFavorite = (isbn: string) => {
