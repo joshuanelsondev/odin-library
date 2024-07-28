@@ -75,7 +75,7 @@ export default function AddBookForm({
   }
 
   const checkForDuplicateIsbn = (isbn: string) => {
-    return myLibrary.some((bookEle: Book) => bookEle.isbn == isbn)
+    return myLibrary.some((bookEle: Book) => bookEle.isbn === isbn)
   }
 
   const handleTextChange = (
