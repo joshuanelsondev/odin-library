@@ -23,6 +23,16 @@ export default function Sidebar({
 
   const [removeBookModal, setRemoveBookModal] = useState<boolean>(false)
 
+  const [confirmationModal, setConfirmationModal] = useState<boolean>(false)
+
+  const handleRemoveBook = (isbn: string) => {
+    removeBook(isbn)
+    setConfirmationModal(true)
+    setTimeout(() => {
+      setConfirmationModal(false)
+    }, 2000)
+  }
+
   return (
     <div className="sidebar">
       {currentBook ? (
@@ -63,13 +73,24 @@ export default function Sidebar({
                 <p className="removeBook-modal__text">
                   Are you sure you want to remove {currentBook.title}?
                 </p>
-                <p className="removeBook-modal__yes" onClick={() => removeBook(currentBook.isbn)}>Yes</p>
+                <p
+                  className="removeBook-modal__yes"
+                  onClick={() => handleRemoveBook(currentBook.isbn)}
+                >
+                  Yes
+                </p>
                 <p
                   className="removeBook-modal__no"
                   onClick={() => setRemoveBookModal(false)}
                 >
                   No
                 </p>
+              </div>
+            )}
+            {/* Book Removed Confirmation Modal */}
+            {confirmationModal && (
+              <div className="confirmation-modal">
+                <p className="confirmation-modal__text">{currentBook.title}</p>
               </div>
             )}
           </div>
