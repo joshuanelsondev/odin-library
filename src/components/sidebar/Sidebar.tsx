@@ -31,6 +31,7 @@ export default function Sidebar({
     setConfirmationModal(true)
     setTimeout(() => {
       setConfirmationModal(false)
+      toggleNoScroll(false)
     }, 2000)
   }
 
@@ -65,6 +66,7 @@ export default function Sidebar({
                   onClick={() => {
                     setEditDropdownVisibility(false)
                     setRemoveBookModal(true)
+                    toggleNoScroll(true)
                   }}
                 >
                   Remove
@@ -85,7 +87,10 @@ export default function Sidebar({
                 </p>
                 <p
                   className="removeBook-modal__no"
-                  onClick={() => setRemoveBookModal(false)}
+                  onClick={() => {
+                    toggleNoScroll(false)
+                    setRemoveBookModal(false)
+                  }}
                 >
                   No
                 </p>
