@@ -6,6 +6,10 @@ body {
   background-color: #1E2021;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 #root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

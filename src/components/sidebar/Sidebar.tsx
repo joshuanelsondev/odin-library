@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Book } from '../../types/Book'
-import { convertDateFormat } from '../utils/dateUtils'
+import { convertDateFormat } from '../../utils/dateUtils'
+import { toggleNoScroll } from '../../utils/scrollUtils'
 import { FaHeart } from 'react-icons/fa'
 import { LuMoreHorizontal } from 'react-icons/lu'
 import './Sidebar.scss'
@@ -42,7 +43,10 @@ export default function Sidebar({
             <LuMoreHorizontal
               className="sidebar__elipsis"
               size={20}
-              onClick={() => setEditDropdownVisibility(!editDropdownVisibility)}
+              onClick={() => {
+                toggleNoScroll(true)
+                setEditDropdownVisibility(!editDropdownVisibility)
+              }}
             />
             {/*Edit Dropdown*/}
             {editDropdownVisibility && (

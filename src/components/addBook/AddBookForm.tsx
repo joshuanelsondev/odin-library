@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Book } from '../../types/Book'
+import { toggleNoScroll } from '../../utils/scrollUtils'
 import { LuX } from 'react-icons/lu'
 import './AddBookForm.scss'
 
@@ -104,6 +105,7 @@ export default function AddBookForm({
       setTimeout(() => {
         setAddBookFormVisibility(false)
         setConfirmationVisibility(true)
+        toggleNoScroll(false)
       }, 2000)
     }
   }
@@ -116,7 +118,10 @@ export default function AddBookForm({
             <h2 className="formModal__header">Add Book</h2>
             <LuX
               className="formModal__close"
-              onClick={() => setAddBookFormVisibility(false)}
+              onClick={() => {
+                toggleNoScroll(false)
+                setAddBookFormVisibility(false)
+              }}
               size={20}
             />
           </div>
@@ -237,7 +242,10 @@ export default function AddBookForm({
             <button
               className="formModal__cancel"
               type="button"
-              onClick={() => setAddBookFormVisibility(false)}
+              onClick={() => {
+                toggleNoScroll(false)
+                setAddBookFormVisibility(false)
+              }}
             >
               Cancel
             </button>
