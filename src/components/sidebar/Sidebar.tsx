@@ -44,7 +44,6 @@ export default function Sidebar({
               className="sidebar__elipsis"
               size={20}
               onClick={() => {
-                toggleNoScroll(true)
                 setEditDropdownVisibility(!editDropdownVisibility)
               }}
             />
@@ -56,6 +55,7 @@ export default function Sidebar({
                   onClick={() => {
                     setEditDropdownVisibility(false)
                     setEditBookFormVisibility(true)
+                    toggleNoScroll(true)
                   }}
                 >
                   Edit
