@@ -16,7 +16,6 @@ function App() {
   const [editBookFormVisibility, setEditBookFormVisibility] =
     useState<boolean>(false)
 
-
   const addBook = (book: Book) => {
     setMyLibrary([...myLibrary, book])
     setCurrentBook(book)
