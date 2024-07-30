@@ -128,17 +128,19 @@
     }
 
     &__yes, &__no {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2em;
       width: 6em;
-      text-align: center;
       color: white;
       font-weight: 600;
       border-radius: 5px;
-      padding: 0.2em 1em;
       box-sizing: border-box;
       box-shadow: 0 2px 2px black;
       cursor: pointer;
 
-      &:hover {
+      &:active {
         box-shadow: 0 1px 1px black;
       }
     }

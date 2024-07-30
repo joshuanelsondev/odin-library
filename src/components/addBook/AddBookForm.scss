@@ -152,6 +152,7 @@ $unchecked-color: white;
   }
 
   &__cancel, &__submit {
+    height: 2.5em;
     width: 8em;
     border: none;
     font-weight: 600;
@@ -160,7 +161,7 @@ $unchecked-color: white;
     box-sizing: border-box;
     box-shadow: 0 2px 2px black;
 
-    &:hover {
+    &:active {
       box-shadow: 0 1px 1px black;
     }
   }
