@@ -79,21 +79,23 @@ export default function Sidebar({
                 <p className="removeBook-modal__text">
                   Are you sure you want to remove {currentBook.title}?
                 </p>
-                <p
+                <div className="removeBook-modal__buttons">
+                  <p
                   className="removeBook-modal__yes"
                   onClick={() => handleRemoveBook(currentBook.isbn)}
-                >
+                  >
                   Yes
-                </p>
-                <p
+                  </p>
+                  <p
                   className="removeBook-modal__no"
                   onClick={() => {
                     toggleNoScroll(false)
                     setRemoveBookModal(false)
                   }}
-                >
+                  >
                   No
-                </p>
+                  </p>
+                </div>
               </div>
             )}
             {/* Book Removed Confirmation Modal */}
