@@ -81,19 +81,19 @@ export default function Sidebar({
                 </p>
                 <div className="removeBook-modal__buttons">
                   <p
-                  className="removeBook-modal__yes"
-                  onClick={() => handleRemoveBook(currentBook.isbn)}
+                    className="removeBook-modal__yes"
+                    onClick={() => handleRemoveBook(currentBook.isbn)}
                   >
-                  Yes
+                    Yes
                   </p>
                   <p
-                  className="removeBook-modal__no"
-                  onClick={() => {
-                    toggleNoScroll(false)
-                    setRemoveBookModal(false)
-                  }}
+                    className="removeBook-modal__no"
+                    onClick={() => {
+                      toggleNoScroll(false)
+                      setRemoveBookModal(false)
+                    }}
                   >
-                  No
+                    No
                   </p>
                 </div>
               </div>
