@@ -8,7 +8,7 @@ export const myLibrary: Book[] = [
     'Titan Comics',
     '2021-10-02',
     'Sit similique quas iste veritatis voluptates Accusantium sequi non voluptates.',
-    'src/assets/bookCovers/ExtraOrdinary.png',
+    'https://file770.com/wp-content/uploads/EXTRAORDINARY-COMIC-SHOP-EXCLUSIVE-SIGNED-EDITION-HARDCOVER.jpg',
     false,
     true
   ),
@@ -19,7 +19,7 @@ export const myLibrary: Book[] = [
     'HarperAlley',
     '2021-10-26',
     'Amet facilis similique culpa non commodi nam? Error facere ipsa',
-    'src/assets/bookCovers/Another_Kind.png',
+    'https://m.media-amazon.com/images/I/918IoLPTDvS._AC_UF1000,1000_QL80_.jpg',
     false,
     false
   ),
@@ -30,7 +30,7 @@ export const myLibrary: Book[] = [
     'Hay House Inc.',
     '2021-09-28',
     'Adipisicing temporibus illum sit sapiente est.',
-    'src/assets/bookCovers/The_High_5_Habit.png',
+    'https://m.media-amazon.com/images/I/71DpYJgrBpL._AC_UF1000,1000_QL80_.jpg',
     false,
     true
   ),
@@ -41,7 +41,7 @@ export const myLibrary: Book[] = [
     'Hanover Square Press',
     '2021-09-07',
     'Lorem numquam cumque eos repudiandae molestias ad similique.',
-    'src/assets/bookCovers/The_Perfect_Day_To....png',
+    'https://m.media-amazon.com/images/I/81PuwV2SLjL._AC_UF1000,1000_QL80_.jpg',
     false,
     true
   ),
@@ -52,7 +52,7 @@ export const myLibrary: Book[] = [
     'Harper Perennial',
     '2021-10-26',
     'Lorem repellendus accusantium enim ex atque Alias praesentium quibusdam neque fugiat',
-    'src/assets/bookCovers/Sapiens_A_Graphic_History.png',
+    'https://m.media-amazon.com/images/I/81wN3RhexHS._AC_UF1000,1000_QL80_.jpg',
     false,
     false
   ),
@@ -63,8 +63,8 @@ export const myLibrary: Book[] = [
     'HarperOne',
     '2021-10-19',
     'Elit velit provident eaque odit iste.',
-    'src/assets/bookCovers/Peak_Mind_Find_Your_Focus.png',
+    'https://m.media-amazon.com/images/I/71Uqm+qDs9L._AC_UF1000,1000_QL80_.jpg',
     false,
     false
-  )
+  ),
 ]
