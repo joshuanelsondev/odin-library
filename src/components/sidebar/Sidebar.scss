@@ -97,8 +97,8 @@
     background-color: #4770C6;
     border-radius: .5em;
     color: white;
-    font-size: 1em;
     font-weight: 600;
+    font-size: 1em;
     cursor: pointer;
   }
 }
@@ -152,4 +152,28 @@
     &__no {
       background-color: red;
     }
+}
+
+.confirmation-modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__text {
+    border-radius: 5px;
+    color: #4C72C4;
+    font-size: 20px;
+    box-sizing: border-box;
+    font-weight: 600;
+    height: 4em;
+    width: 15em;
+    background-color: #E1EBFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px black;
+  }
 }
