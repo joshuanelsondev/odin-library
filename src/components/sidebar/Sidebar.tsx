@@ -27,10 +27,9 @@ export default function Sidebar({
   const [confirmationModal, setConfirmationModal] = useState<boolean>(false)
 
   const handleRemoveBook = (isbn: string) => {
+    removeBook(isbn)
     setConfirmationModal(true)
-    setRemoveBookModal(false)
     setTimeout(() => {
-      removeBook(isbn)
       setConfirmationModal(false)
       toggleNoScroll(false)
     }, 2000)
@@ -102,9 +101,7 @@ export default function Sidebar({
             {/* Book Removed Confirmation Modal */}
             {confirmationModal && (
               <div className="confirmation-modal">
-                <p className="confirmation-modal__text">
-                  {currentBook.title} has been removed
-                </p>
+                <p className="confirmation-modal__text">{currentBook.title}</p>
               </div>
             )}
           </div>
