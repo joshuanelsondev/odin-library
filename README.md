@@ -1,5 +1,5 @@
 # Odin Library
-![App Screenshot]("src/assets/app-screenshot.png")
+![App Screenshot](src/assets/app-screenshot.png)
 
 ### Overview
 The Odin Project Library is a single-page frontend application built with Vite, React, and TypeScript. This mini project allows users to manage their personal book collection with features to add, edit, and remove books. Styled using Sass with BEM naming conventions, the application provides a clean and intuitive interface for interacting with your library.
