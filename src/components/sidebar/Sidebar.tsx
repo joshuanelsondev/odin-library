@@ -42,7 +42,7 @@ export default function Sidebar({
           <div className="sidebar__heading">
             <h3 className="sidebar__header">About This Book</h3>
             <LuMoreHorizontal
-              className="sidebar__elipsis"
+              className="sidebar__ellipsis"
               size={20}
               onClick={() => {
                 setEditDropdownVisibility(!editDropdownVisibility)
